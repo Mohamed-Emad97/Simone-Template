@@ -1,0 +1,38 @@
+//Import Variblies File
+@use "../variblies/variblies.scss" as *;
+
+//Import Mixin File
+@use "../mixin/mixin.scss" as *;
+
+#testimonial {
+    .mainHeading{
+        @include mainHeading();
+    }
+    .content{
+        .card{
+            outline: none;
+            border: none;
+            border-radius: $boder-reduis;
+            background-color: $bg-color;
+            .header{
+                gap: 15px;
+                h4{
+                    margin: 0;
+                    color: $Head-Text-Color;
+                }
+                span{
+                    color: $alt-txt-color;
+                    font-weight: bold;
+                }
+            }
+            p{
+                color: $text-color;
+            }
+            .rate{
+                .icon{
+                    color: $rate-color;
+                }
+            }
+        }
+    }
+}

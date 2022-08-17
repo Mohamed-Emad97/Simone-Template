@@ -1,0 +1,29 @@
+//Import Variblies File
+@use "../variblies/variblies.scss" as *;
+
+//Import Mixin File
+@use "../mixin/mixin.scss" as *;
+
+#static{
+    .data{
+        position: relative;
+        .boder{
+            content: "";
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            background-color: $alt-txt-color;
+            transform: translateY(-50%);
+            width: 2px;
+            opacity: 0.3;
+            height: 80%;
+        }
+        .num{
+            color: $alt-txt-color;
+        }
+        p{
+            color: $text-color;
+            font-size: $main-txt-font;
+        }
+    }
+}

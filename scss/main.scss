@@ -1,0 +1,60 @@
+//Import Variblies File
+@use "variblies/variblies.scss" as *;
+
+//Import Mixin File
+@use "mixin/mixin.scss" as *;
+
+//Import Header Section
+@use "sections/Header.scss" as *;
+
+//Import Home Section
+@use "sections/Home.scss" as *;
+
+//Import About Section
+@use "sections/About.scss" as *;
+
+//Import Static Section
+@use "sections/Static.scss" as *;
+
+//Import Services Section
+@use "sections/Services.scss" as *;
+
+//Import Resume Section
+@use "sections/Resume.scss" as *;
+
+//Import Skills Section
+@use "sections/Skills.scss" as *;
+
+//Import Portfilio Section
+@use "sections/Portfilio.scss" as *;
+
+//Import Testimonial Section
+@use "sections/Testimonial.scss" as *;
+
+//Import Contact Section
+@use "sections/Contact.scss" as *;
+
+//Import Footer Section
+@use "sections/Footer.scss" as *;
+
+//Global Rules
+*{
+    @include reset();
+}
+
+.center{
+    @include center();
+}
+
+$socials: ("facebook": #1877f2, "twitter": #1da1f2, "dribble": #9ba5a8, "google": #dd4b39, "github": #333);
+
+@each $name, $color in $socials {
+    .#{$name}{
+        font-size: $alt-txt-font;
+        cursor: pointer;
+        transition: all $trasition-time;
+    }
+    .#{$name}:hover{
+        color: $color !important;
+    }
+}

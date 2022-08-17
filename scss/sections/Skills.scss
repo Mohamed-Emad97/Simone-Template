@@ -1,0 +1,25 @@
+//Import Variblies File
+@use "../variblies/variblies.scss" as *;
+
+//Import Mixin File
+@use "../mixin/mixin.scss" as *;
+
+#skills{
+    h3{
+        color: $Head-Text-Color;
+    }    
+    .head{
+        span{
+            color: $text-color;
+        }
+    }
+    .btn-main{
+        @include mainBtn($alt-txt-color);
+        background-color: transparent !important;
+        border: 1px solid $alt-txt-color !important;
+        color: $alt-txt-color;
+        &:hover{
+            background-color: $alt-txt-color !important;
+        }
+    }
+}

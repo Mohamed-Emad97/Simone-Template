@@ -1,0 +1,45 @@
+//Import Variblies File
+@use "../variblies/variblies.scss" as *;
+
+//Import Mixin File
+@use "../mixin/mixin.scss" as *;
+
+#home{
+    background-image: url(../images/intro-bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    &::after{
+        content: "";
+        @include overlay(rgba(0,0,0,0.5), 0);
+        z-index: 5;
+    }
+    .caption{
+        position: relative;
+        z-index: 20;
+        .title{
+            font-size: 50px;
+        }
+        .desc{
+            font-size: 20px;
+            // color: $alt-txt-color;
+        }
+        .btn-main{
+            @include mainBtn(transparent);
+        }
+    }
+    .upDown{
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        cursor: pointer;
+        animation: upDown 1s infinite  alternate;
+    }
+}
+
+//Animation UpDown
+@keyframes upDown {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
+}

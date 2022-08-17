@@ -1,0 +1,45 @@
+//Import Variblies File
+@use "../variblies/variblies.scss" as *;
+
+//Import Mixin File
+@use "../mixin/mixin.scss" as *;
+
+footer{
+    a{
+        text-decoration: none;
+    }
+    .right{
+        p{
+            color: $text-color;
+            font-weight: bold;
+            a{
+                color: $main-color;
+                transition: all $trasition-time;
+                &:hover{
+                    color: $dark-color;
+                }
+            }
+        }
+    }
+    .left{
+        a{
+            color: $text-color;
+            margin-right: 15px;
+            transition: all $trasition-time;
+            &:hover{
+                color: $main-color;
+            }
+        }
+        .boder{
+            content: "";
+            position: absolute;
+            left: 55%;
+            top: 0;
+            background-color: $alt-txt-color;
+            transform: translateX(-50%);
+            width: 2px;
+            opacity: 0.3;
+            height: 50%;
+        }
+    }
+}

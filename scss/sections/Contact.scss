@@ -1,0 +1,68 @@
+//Import Variblies File
+@use "../variblies/variblies.scss" as *;
+
+//Import Mixin File
+@use "../mixin/mixin.scss" as *;
+
+#contact{
+    background-color: $bg-color;
+    .mainHeading{
+        @include mainHeading();
+    }
+    .contactInfo{
+        h4{
+            color: $Head-Text-Color;
+        }
+        p{
+            color: $text-color;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li{
+                .icon{
+                    color: $main-color;
+                    margin-right: 5px;
+                }
+                .txt{
+                    color: $text-color;
+                }
+            }
+        }
+    }
+    .contactForm{
+        h4 {
+            color: $Head-Text-Color;
+        }
+        form{
+            gap: 20px;
+        }
+        input,textarea{
+            outline: none;
+            border: 1px solid $inputs-boder-color;
+            border-radius: $boder-reduis;
+            color: $inputs-txt-color;
+        }
+        textarea{
+            height: 130px;
+        }
+        input::placeholder,textarea::placeholder{
+            color: $inputs-txt-color;
+        }
+        input:focus,textarea:focus{
+            outline: 1px solid $main-color;
+        }
+        .btn-main{
+            @include mainBtn($main-color);
+            color: $alt-color !important;
+            box-shadow: 3px 0px 23px -3px rgba(0,0,0,0.55);
+            -webkit-box-shadow: 3px 0px 23px -3px rgba(0,0,0,0.55);
+            -moz-box-shadow: 3px 0px 23px -3px rgba(0,0,0,0.55);
+            &:hover{
+                background-color: $dark-color !important;
+                border-color: $dark-color !important;
+            }
+        }
+    }
+}

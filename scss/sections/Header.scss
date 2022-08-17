@@ -1,0 +1,22 @@
+//Import Variblies File
+@use "../variblies/variblies.scss" as *;
+
+//Import Mixin File
+@use "../mixin/mixin.scss" as *;
+
+header{
+    z-index: 100000;
+    nav{
+        .logo{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .link{
+            font-size: $alt-txt-font;
+            transition: all $trasition-time;
+            &:hover{
+                color: $main-color !important;
+            }
+        }
+    }
+}

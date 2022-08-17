@@ -1,0 +1,28 @@
+//Import Variblies File
+@use "../variblies/variblies.scss" as *;
+
+//Import Mixin File
+@use "../mixin/mixin.scss" as *;
+
+#resume{
+    .mainHeading{
+        @include mainHeading();
+    }
+    .box{
+        border: 1px solid $alt-txt-color;
+        border-radius: $boder-reduis;
+        .date{
+            background-color: $main-color;
+            border-radius: $boder-reduis;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        h4{
+            color: $Head-Text-Color;
+        }
+        .desc{
+            color: $text-color;
+            font-size: $alt-txt-font;
+        }
+    }
+}

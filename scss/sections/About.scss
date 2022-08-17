@@ -1,0 +1,71 @@
+//Import Variblies File
+@use "../variblies/variblies.scss" as *;
+
+//Import Mixin File
+@use "../mixin/mixin.scss" as *;
+
+#about{
+    .mainHeading{
+        @include mainHeading();
+    }
+    .info{
+        h4{
+            color: $Head-Text-Color;
+            span.main{
+                color: $main-color !important;
+            }
+        }
+        p{
+            color: $text-color;
+            font-size: $alt-txt-font;
+        }
+    }
+    .detailed{
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li{
+                &:not(:last-child)::after{
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    bottom: -10px;
+                    background-color: $alt-txt-color;
+                    transform: translateX(-50%);
+                    width: 80%;
+                    opacity: 0.3;
+                    height: 1px;
+                }
+                .title{
+                    color: $text-color;
+                    margin-right: 5px;
+                }
+                .desc{
+                    color: $alt-txt-color;
+                    font-size: $alt-txt-font;
+                    a{
+                        text-decoration: none;
+                        color: $main-color;
+                        font-size: $alt-txt-font;
+                        transition: all $trasition-time;
+                        &:hover{
+                            opacity: 0.6;
+                        }
+                    }
+                }
+            }
+        }
+        .btn-main{
+            @include mainBtn($main-color);
+            color: $alt-color !important;
+            box-shadow: 3px 0px 23px -3px rgba(0,0,0,0.55);
+            -webkit-box-shadow: 3px 0px 23px -3px rgba(0,0,0,0.55);
+            -moz-box-shadow: 3px 0px 23px -3px rgba(0,0,0,0.55);
+            &:hover{
+                background-color: $dark-color !important;
+                border-color: $dark-color !important;
+            }
+        }
+    }
+}
